@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css" type="text/css" />
+    <script src="registration.js"></script>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Registration Form</h2>
+            <form id="register" name="myform" method="POST" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateform()" >
+                
+                <label for="">First Name :</label><br>
+                <input type="text" name="fname" id="fname" placeholder="Enter your First Name" required><br><br>
+                
+                <label for="">Last Name :</label><br>
+                <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required><br><br>
+                
+                <label for="">City :</label><br>
+                <input type="text" name="city" id="city" placeholder="Enter your City" required><br><br>
+                
+                <label for="">Gender :</label><br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male" value="male" required />
+                &nbsp;
+                <span>Male</span>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="female" value="female" required />
+                &nbsp;
+                <span>Female</span><br><br>
+                
+                <label for="country">Country:</label><br>
+                &nbsp;&nbsp;&nbsp;
+                <select id="country" name="country" >
+                    <option id="country" value="India">India</option>
+                    <option id="country" value="US">US</option>
+                    <option id="country" value="Australia">Australia</option>
+                    <option id="country" value="UK">UK</option>
+                </select><br><br>
+                
+                <label for="">Known Language :</label><br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="lang1" value="english">
+                &nbsp;
+                <span>English</span>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="lang2" value="hindi">
+                &nbsp;
+                <span>Hindi</span>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="lang3" value="gujarati">
+                &nbsp;
+                <span>Gujarati</span><br><br>
+
+
+             
+                <input class="button" type="button" value="Insert" name="submit" id="submit" onclick="onInsert()">
+                &nbsp;&nbsp;&nbsp;
+                
+                <input class="button" type="reset" value="Reset" name="reset" id="reset" onclick="onReset()">
+                &nbsp;&nbsp;&nbsp;
+              
+            </form>
+        </div>
+    </div>
+
+    <div class="main2">
+        <div class="search">
+            
+            <div class="scity">
+                <label for=""> City</label><br>
+                <input id="search" type="text" placeholder="Find By City" onkeyup="searchCity()">
+            </div>
+            
+        </div>
+    </div>
+    
+    <table id="regtable" class="content-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>    
+                <th>City</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Known Language</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tablerows">
+            
+        </tbody>
+    </table>
+</body>
+</html>
